@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>BlacK MarkeT</title>
+    <link rel="stylesheet" href="../../CSS/side_bar.css">
+    <link rel="stylesheet" href="../../CSS/base.css">
+    <link rel="stylesheet" href="../../CSS/footer.css">
+    <link rel="stylesheet" href="../../CSS/diffscreen.css">
+    <script src="../../JS/sidebar.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--newly added css-->
+    <link rel="stylesheet" href="../../CSS/cart.css">
+    <script src="../../JS/cart.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="topnav">
+       <div id="sidebar" class="Sidebar">
+         <a href="javascript:void(0)" class="Sclosebtn" onclick="closeNav()">X</a>
+         <a href="../../A_homepage.html" class="btn">HOME</a>
+         <a href="../ABOUTUS/A_ourstory.html" class="btn">ABOUT</a>
+         <a class="dropdown-btn" id="btn" >SHOP 
+          <i class="fa fa-caret-down"></i>
+         </a>
+        <div class="dropdown-container" >
+          <a href="../SHOP/A_shop.html">SHOP ALL</a>
+          <a href="../SHOP/A_top.html">TOP</a>
+          <a href="../SHOP/A_bottom.html">BOTTOM</a>
+          <a href="../SHOP/A_outerwear.html">OUTERWEAR</a>
+        </div>
+        <a href="../MYACCOUNT/A_myaccount.html" class="btn">MEMBERSHIP</a>
+        <a href="../CART/A_cart.html" class="btn">CART</a>
+    </div>
+
+      <div class="main">
+        <div class="left">
+        <div class="Sopenbtn" onclick="openNav()">☰ </div>
+        <script src="../../../JS/sidebar_dropdown.js"></script>
+        </div>
+    </div>
+
+      <div class="center">
+        <a href="../../A_homepage.html">BlacK MarkeT</a>
+      </div>
+
+      <div class="right_top_nav">
+       
+        <a href="../CART/A_cart.html">     <i class="material-icons" id="top_nav_btn" style="font-size: xx-large;">shopping_cart</i></a>
+        <a href="../MYACCOUNT/A_myaccount.html"><i class="material-icons" id="top_nav_btn1" style="font-size: xx-large;">account_circle</i></a>
+     </div>
+    </div>
+  </header>
+    <!--rendering cart area-->
+    
+    <!--Code start here-->
+    <h1>Cart</h1>
+    
+    <div id="priceBox">
+      <div id="toCheckout">
+        <p id="productTotalPrice">1</p>
+        <p id="shippingFee">Shipping fee:</p>
+        <p id="totalPrice"></p>
+      </div>
+      <div id="checkoutButton">
+        <a href="A_checkout.html">Checkout</a>
+      </div>
+
+      <!-------shipping---------->
+      
+      <div id="deliveryType">
+        <input type="radio" name="shipping" id="standard" value="3.99" onclick="standardPrice()">
+        <label for="standard">Standard (3-7 days): RM3.99</label>
+        <input type="radio" name="shipping" id="express" value="5.99" onclick="expressPrice()">
+        <label for="express">Express (1-5 days): RM5.99</label>
+
+      </div>
+    </div>
+
+
+    
+
+    <div class="cartBox">
+      <!--------------------------------Product 0--------------------------------->
+      <div class="product" id="product0">
+        <p>There is no product here.</p>
+        <a href="../../A_homepage.html">Back to homepage</a>
+        <br><br>
+      </div>
+
+      
+      <!--------------------------------Product 1--------------------------------->
+      <div class="product" id="product1">
+        <a href="../SHOP/PRODUCT_PAGE/A_product1.html">
+          <img src="../../Product/product1/Product1_Blue.jpg" alt="product1">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product1.html">
+            <h2 id="productName1">Product name 1</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity1"
+            onchange="updatequantity1()">
+            <div>
+              <label for="size1" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select name="size1" id="size1" onchange="updateSize1()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton" onclick="removeproduct1()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price1">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+       <!--------------------------------Product 2--------------------------------->
+      <div class="product" id="product2">
+        <a href="../SHOP/PRODUCT_PAGE/A_product2.html">
+          <img src="../../Product/product2/Product2_Blue.jpg" alt="product2">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product2.html">
+            <h2 id="productName2">Product name 2</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity2"
+            onchange="updatequantity2()">
+            <div>
+              <label for="size" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select name="size" id="size2" onchange="updateSize2()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct2()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price2">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+       <!--------------------------------Product 3--------------------------------->
+       <div class="product" id="product3">
+        <a href="../SHOP/PRODUCT_PAGE/A_product3.html">
+          <img src="../../Product/product3/Product3_Black.jpg" alt="product3">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product3.html">
+            <h2 id="productName3">Product name 3</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity3"
+            onchange="updatequantity3()">
+            <div>
+              <label for="size" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select id="size3" name="size" onchange="updateSize3()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct3()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price3">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+      <!--------------------------------Product 4--------------------------------->
+      <div class="product" id="product4">
+        <a href="../SHOP/PRODUCT_PAGE/A_product4.html">
+          <img src="../../Product/product4/Product4_Black.jpg" alt="product4">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product4.html">
+            <h2 id="productName4">Product name 4</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity4"
+            onchange="updatequantity4()">
+            <div>
+              <label for="size" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select id="size4" name="size" onchange="updateSize4()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct4()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price4">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+      <!--------------------------------Product 5--------------------------------->
+      <div class="product" id="product5">
+        <a href="../SHOP/PRODUCT_PAGE/A_product5.html">
+          <img src="../../Product/product5/Product5_multicolor.jpg" alt="product5">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product5.html">
+            <h2 id="productName5">Product name 5</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity5"
+            onchange="updatequantity5()">
+            <div>
+              <label for="size" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select id="size5" name="size" onchange="updateSize5()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct5()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price5">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+      
+       <!--------------------------------Product 6--------------------------------->
+       <div class="product" id="product6">
+        <a href="../SHOP/PRODUCT_PAGE/A_product6.html">
+          <img src="../../Product/product6/Product6_Black.jpg" alt="product6">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product6.html">
+            <h2 id="productName6">Product name 6</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity6"
+            onchange="updatequantity6()">
+            <div>
+              <label for="size6" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select name="size" id="size6" onchange="updateSize6()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct6()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price6">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+       <!--------------------------------Product 7--------------------------------->
+       <div class="product" id="product7">
+        <a href="../SHOP/PRODUCT_PAGE/A_product7.html">
+          <img src="../../Product/product7/Product7_Navy.jpg" alt="product7">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product7.html">
+            <h2 id="productName7">Product name 7</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity7"
+            onchange="updatequantity7()">
+            <div>
+              <label for="size" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select name="size" id="size7" onchange="updateSize7()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct7()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price7">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+       <!--------------------------------Product 8--------------------------------->
+       <div class="product" id="product8">
+        <a href="../SHOP/PRODUCT_PAGE/A_product8.html">
+          <img src="../../Product/product8/Product8_Black.jpg" alt="product8">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product8.html">
+            <h2 id="productName8">Product name 8</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity8"
+            onchange="updatequantity8()">
+            <div>
+              <label for="size" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select name="size" id="size8" onchange="updateSize8()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct8()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price8">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+       <!--------------------------------Product 9--------------------------------->
+       <div class="product" id="product9">
+        <a href="../SHOP/PRODUCT_PAGE/A_product9.html">
+          <img src="../../Product/product9/Product9_Black.jpg" alt="product9">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product9.html">
+            <h2 id="productName9">Product name 9</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity9"
+            onchange="updatequantity9()">
+            <div>
+              <label for="size" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select name="size" id="size9" onchange="updateSize9()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct9()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price9">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+       <!--------------------------------Product 10--------------------------------->
+       <div class="product" id="product10">
+        <a href="../SHOP/PRODUCT_PAGE/A_product10.html">
+          <img src="../../Product/product10/Product10_Black.jpg" alt="product10">
+        </a>
+        <!--Name and detail-->
+        <div class="carttext">
+          <a href="../SHOP/PRODUCT_PAGE/A_product10.html">
+            <h2 id="productName10">Product name 10</h2>
+          </a>
+          <div class="innercarttext">
+            <p>Quantity</p>
+            <input type="number" min=1 max=100 value=1 step=1 id="quantity10"
+            onchange="updatequantity10()">
+            <div>
+              <label for="size" style="font-size: 10px;">SELECT A SIZE: </label><br>
+              <select name="size" id="size10" onchange="updateSize10()">
+                <option value="M">M</option>
+                <option value="L" >L</option>
+                <option value="XL" >XL</option>
+              </select>
+            </div>
+          </div>
+          <!--Remove-->
+          <div class="RemoveProduct">
+            <button class="removebutton"onclick="removeproduct10()"> Remove </button>
+          </div>
+          <div class="pricebox">
+            <div>
+              <br>
+              <p id="price10">Price: 00.00</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+      
+
+      
+      <script>
+        window.onload = function(){
+          generatecart()
+          var getInput = "random stringgg"
+          localStorage.setItem("1233", getInput)
+          
+          
+
+          
+        }
+      </script>
+
+      <!--End here-->
+
+      <footer>
+        <div class="footer_container">
+          <div class="footerBox">
+            <ul>
+              <li class="footerHead">ABOUT</li>
+              <li><a href="HTML/ABOUTUS/A_ourstory.html">STORY</a></li>
+              <li><a href="HTML/ABOUTUS/A_contactus.html">CONTACT US</a></li>
+            </ul>
+          </div>
+  
+          <div class="footerBox">
+            <ul>
+              <li class="footerHead">LOCATIONS</li>
+              <li><iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.5342401009584!2d101.7268275502969!3d3.216169653622467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3843bfb6a031%3A0x2dc5e067aae3ab84!2z5ouJ5pu85aSn5a2m5a2m6Zmi!5e0!3m2!1szh-CN!2sus!4v1647432306989!5m2!1szh-CN!2sus"  allowfullscreen="" loading="lazy"></iframe></li>
+            </ul>
+          </div>
+  
+          <div class="footerBox">
+            <ul>
+              <li class="footerHead">INFORMATION</li>
+              <li><a href="HTML/ABOUTUS/A_privacypolicy.html">PRIVACY POLICY</a></li>
+              <li><a href="HTML/ABOUTUS/A_refundpolicy.html">REFUND POLICY</a></li>
+              <li><a href="HTML/ABOUTUS/A_shippinginformation.html">SHIPPING INFORMATION</a></li>
+            </ul>
+          </div>
+  
+          <div class="footerBox">
+            <ul>
+              <li class="footerHead">Newsletter</li>
+              <li>
+                <form method="post" action="#">
+                  <input type="email" id="email" name="email" placeholder="email@example.com">
+                  <input type="submit" value="Submit" id="submit">
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom_footer">
+          <a href="https://www.facebook.com/gan.chanheng.98" class="fa fa-facebook"></a>
+          <a href="https://www.instagram.com/_ahhengheng_/" class="fa fa-instagram"></a>
+          <a href="https://api.whatsapp.com/send?phone=60162833812" class="fa fa-whatsapp"></a>
+          <P>© 2022, BlacK MarkeT Group.</P>
+        </div>
+      </footer>
+  </body>
+      
+
+
+  
+    

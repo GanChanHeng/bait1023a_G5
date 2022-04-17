@@ -1,0 +1,135 @@
+#body1 {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    background-color: rgb(240, 238, 234);
+}
+
+
+#mainBody {
+    display: block;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 4px 3px 2px #888888;
+    min-width: 510px;
+}
+
+@media only screen and (max-width: 800px) {
+	#mainBody{
+		width: 100%;
+        border-radius: 0px;
+	}
+}
+
+#backBox {
+    color: black;
+    display: inline-block;
+    border: solid 1px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+
+.invoice> p {
+    font-size: 16px;
+    margin: 10px;
+}
+#temp4 {
+    text-align: center;
+    color: grey;
+    ;
+}
+
+#name {
+    display: inline-block;
+    min-width: 180px;
+}
+
+#purchaseDate {
+  display: inline;
+  float: right;
+  min-width: 175px;
+}
+
+#toPayment {
+    display: inline;
+    float: right;
+    vertical-align: text-bottom;
+}
+#toPayment p{border: 1px;
+    display: inline;
+    border-style: solid;
+    border-radius: 20px;
+    box-shadow: 4px 3px #888888;
+    text-align: center;
+    padding: 5px 10px;
+    color: black;
+    background-color: rgb(233, 230, 229);
+    
+}
+
+#tncOverlay {
+    display: none;
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    
+}
+#tncBox {
+    background-color: white;
+    padding: 25px;
+    /*border: solid 2px;
+    border-color: black;*/
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+#tncBox>p {
+    font-size: 14px;
+    color: rgb(113, 113, 113);
+}
+
+#formBox>div {
+    margin: 15px;
+}
+p#closeTncBox {
+    text-align: center;
+    color:white;
+    transition: 1s;
+}
+#tncBox:hover > p#closeTncBox {
+    color: rgb(186, 186, 186);
+}
+
+input[type="submit"] {
+    
+    border-style: solid;
+    border-radius: 20px;
+    box-shadow: 4px 3px 1px #888888;
+    text-align: center;
+    padding: 5px 10px;
+    color: black;
+    background-color: rgb(233, 230, 229);
+}
+input[type="submit"]:hover {
+     box-shadow: 2px 1px 1px #888888;
+    transition: 0.3s;
+ }
+#submitDiv {
+    display: none;
+}

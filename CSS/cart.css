@@ -1,0 +1,175 @@
+body {
+    background-color: #f3f3f3;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+
+}
+
+h1{
+    display: block;
+    padding: 0px 20px;
+}
+#priceBox {
+    display: none;
+    margin:  20px;
+    min-width: 800px;
+    height: 120px;
+}
+#toCheckout {
+    display: inline-block;
+    width: 60%;
+}
+#checkoutButton {
+    display: none;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 0px;
+   
+}
+#checkoutButton a{
+    display: inline;
+    float: right;
+    width: 90px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+    color: #888888;
+}
+#checkoutButton a:hover{
+    transition: 0.3s;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 8px #888888;
+}
+
+.cartBox {
+    display: block;
+    margin:  10px;
+    min-width: 800px;
+}
+
+.product{
+    margin-top: 5px;
+    margin-bottom: 8px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    
+    position: relative;
+    bottom: 0px;
+    transition: 0.3s; 
+
+}
+.product img{
+    margin: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    min-width: 174px;
+    max-width: 17%;
+    padding: 1%;
+      
+}
+.product:hover{
+    background-color: white;
+    bottom: 5px;
+    transition: 0.3s;
+    box-shadow: 4px 3px 13px #888888;
+}
+.product img:hover{
+    box-shadow: 0px 0px 5px #888888;
+    transition: 0.3s;
+}
+.product h2{ 
+    color: blueviolet;
+    margin-bottom: 5px;
+    text-decoration: underline 1.5px;
+}
+.product h2:hover{ 
+    color: rgb(148, 121, 175);
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+div.carttext{
+    width: 74%;
+    display: inline-block;
+    vertical-align: top;
+}
+.innercarttext {
+    display: block;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+.innercarttext>p{
+    text-align: left;
+    font-size: 15px;
+    margin: 0%;
+    padding: 5px;
+}
+
+.RemoveProduct{
+    display: inline-block;
+    margin-left: 4%;
+}
+.pricebox{
+    display: inline;
+    padding-right: 20px;
+    float: right;
+}
+.RemoveProduct > button{
+    display: inline-block;
+    border: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 5px 17px;
+    margin-top: 10px;
+}
+
+.RemoveProduct>button:hover{
+    box-shadow: 0 0 3px rgb(101, 101, 101);
+    padding: 5px 17px;
+    transition: 0.3s;
+}
+.pricebox >div{
+    display: inline-block;
+    vertical-align: bottom;
+}
+.pricebox p{
+    margin: 0px;
+    text-align: right;
+    
+}
+
+#deliveryType label {
+
+    height: 50px;
+    padding-right: 50px;
+    /*background-color: red;*/
+}
+
+#product0 {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#product0>a {
+    border: 1px solid;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+    border-radius: 10px;
+    font-size: 13px;
+    color: black;
+
+    position: relative;
+    bottom: 0px;
+}
+#product0>a:hover {
+    box-shadow: 5px 5px #888888;
+    bottom: 5px;
+    transition: 0.3s;
+}
+#product0, #product1,#product2,#product3, #product4, #product5,
+#product6, #product7,#product8,#product9, #product10 {
+    display: none;
+}

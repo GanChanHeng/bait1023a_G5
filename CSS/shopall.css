@@ -1,0 +1,64 @@
+.toptext{
+  font-size: xx-large;
+  color: black;
+  width: 80px;
+  border-bottom: 3px solid ;
+  border-top: 3px solid ;
+  padding: 10px;
+  margin: 5px 5px 0px 45%;
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+}
+.bottomtext{
+  font-size: xx-large;
+  color: black;
+  width: 135px;
+  border-bottom: 3px solid ;
+  border-top: 3px solid ;
+  padding: 10px;
+  margin: 10px 5px 0px 45%;
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+}
+.outerweartext{
+  font-size: xx-large;
+  color: black;
+  width: 195px;
+  border-bottom: 3px solid ;
+  border-top: 3px solid ;
+  padding: 10px;
+  margin: 0px 5px 0px 45%;
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+}
+.top_content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.bottom_content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.outerwear_content{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 600px) {
+  .newarrivalcard_image{
+    width: 230px;
+    height: 240px;
+  }
+  .newarrivalcard{
+    width: 230px;
+    height: 400px;
+  }
+  .toptext{
+    margin: 10px 5px 0px 43%;
+  }
+  .bottomtext{
+    margin: 10px 5px 0px 37%;
+  }
+  .outerweartext{
+    margin: 10px 5px 0px 32%;
+  }
+}
