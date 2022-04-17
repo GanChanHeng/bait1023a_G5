@@ -2,7 +2,7 @@
 if(localStorage.p9q==0){
     localStorage.p9q = 1;
 }
-localStorage.p2q=1;
+localStorage.p9q=1;
 document.getElementById("quantity_number").innerHTML = localStorage.p9q;
 function P1() {
   if (localStorage.p9q) {
